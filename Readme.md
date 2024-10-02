@@ -25,7 +25,7 @@ Este proyecto es una aplicación de carrito de compras simple que permite a los 
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/Crisca-cyver/Etregable1Carrizo.git
+   git clone https://github.com/Crisca-cyver/TiendaDeVentas.git
    ```
 2. Navega al directorio del proyecto:
 
