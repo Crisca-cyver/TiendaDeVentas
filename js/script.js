@@ -51,7 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 cartItem.classList.add('cart-item');
                 cartItem.innerHTML = `
                     <h5>${item.title}</h5>
-                    <p>Cantidad: ${item.quantity}</p>
+                    <p>Cantidad: <button class="btn btn-sm btn-secondary decrease-quantity" data-product-id="${item.id}">-</button> 
+                    ${item.quantity} 
+                    <button class="btn btn-sm btn-secondary increase-quantity" data-product-id="${item.id}">+</button></p>
                     <p>Precio: $${(item.price * item.quantity).toFixed(2)}</p>
                     <button class="btn btn-danger btn-sm remove-from-cart" data-product-id="${item.id}">Borrar</button>
                 `;
@@ -59,6 +61,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             totalPriceElement.innerHTML = `Total: $${this.getTotalPrice().toFixed(2)}`;
+
+            // Añadir eventos a los botones de modificar cantidad
+            document.querySelectorAll('.increase-quantity').forEach(button => {
+                button.addEventListener('click', () => {
+                    const productId = parseInt(button.dataset.productId);
+                    this.changeQuantity(productId, 1);
+                    this.render();
+                });
+            });
+
+            document.querySelectorAll('.decrease-quantity').forEach(button => {
+                button.addEventListener('click', () => {
+                    const productId = parseInt(button.dataset.productId);
+                    this.changeQuantity(productId, -1);
+                    this.render();
+                });
+            });
 
             // Añadir evento a los botones de borrar del carrito
             document.querySelectorAll('.remove-from-cart').forEach(button => {
@@ -68,6 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     this.render();
                 });
             });
+        }
+
+        changeQuantity(productId, change) {
+            const cartItem = this.items.find(item => item.id === productId);
+            if (cartItem) {
+                cartItem.quantity += change;
+                if (cartItem.quantity <= 0) {
+                    this.removeItem(productId);
+                } else {
+                    this.save();
+                }
+            }
         }
     }
 

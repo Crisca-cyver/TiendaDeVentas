@@ -13,7 +13,6 @@ h1 {
     color: #58b8e8; /* Color claro para el encabezado */
 }
 
-
 h2 {
     font-size: 1.5rem;
 }
@@ -69,5 +68,28 @@ button:hover {
 #cart {
     max-height: 400px;
     overflow-y: auto;
+}
+
+/* Estilo para los botones de cantidad en el carrito */
+button.increase-quantity, button.decrease-quantity {
+    background-color: #28a745; /* Verde para aumentar */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+button.decrease-quantity {
+    background-color: #dc3545; /* Rojo para disminuir */
+}
+
+button.increase-quantity:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el mouse */
+}
+
+button.decrease-quantity:hover {
+    background-color: #c82333; /* Rojo más oscuro al pasar el mouse */
 }
 
