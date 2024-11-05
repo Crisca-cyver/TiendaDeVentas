@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-commerce de Productos de Limpieza</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Enlace al archivo CSS para estilos personalizados -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
+  <body>
     <div class="container">
-        <h1 class="my-6">E-commerce de Productos de Limpieza</h1>
-        <div class="row">
-            <div class="col-md-8" id="product-list">
-                <div class="row" id="product-cards">
-                    <!-- Las tarjetas de productos se insertarán aquí -->
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div id="cart-container">
-                    <h2 class="my-4">Carrito de Compras</h2>
-                    <div id="cart-summary" class="mb-4">
-                        <div id="total-price" class="total-price">
-                            <h5>Total: $0.00</h5>
-                        </div>
-                        <button id="clear-cart" class="btn btn-danger">Vaciar Carrito</button>
-                    </div>
-                    <div id="cart" class="mb-7">
-                        <!-- Aquí se insertarán los productos del carrito -->
-                    </div>
-                </div>
-            </div>
+      <h1 class="my-6">E-commerce de Productos de Limpieza</h1>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row" id="product-cards">
+            <!-- Las tarjetas de productos se insertarán aquí dinámicamente -->
+          </div>
         </div>
+        <div class="col-md-4">
+          <div id="cart-container">
+            <h2 class="my-4">Carrito de Compras</h2>
+            <div id="cart-summary" class="mb-4">
+              <div id="total-price" class="total-price">
+                <h5>Total: $0.00</h5>
+              </div>
+              <button id="clear-cart" class="btn btn-danger">
+                Vaciar Carrito
+              </button>
+              <button id="checkout" class="btn btn-success mt-2">
+                Finalizar Compra
+              </button>
+            </div>
+            <div id="cart" class="mb-7">
+              <!-- Aquí se insertarán los productos del carrito de compras -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="js/script.js" defer></script> <!-- Enlace al archivo JS -->
-</body>
+    <script src="js/script.js" defer></script>
+    <!-- Enlace al archivo JS que contiene la lógica del carrito y la interacción con los productos -->
+  </body>
 </html>

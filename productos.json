@@ -1,0 +1,15 @@
+[
+    { "id": 1, "title": "Ala", "description": "Jabón en polvo x 10kg", "image": "ala.PNG", "price": 10.00 },
+    { "id": 2, "title": "Alcohol", "description": "Alcohol desinfectante x 1lt", "image": "alcohol.PNG", "price": 5.00 },
+    { "id": 3, "title": "Confort", "description": "Suavizante para la ropa x 3lt", "image": "confort.PNG", "price": 7.50 },
+    { "id": 4, "title": "Escobillón", "description": "Escoba primera marca x 40cm", "image": "escobillon.PNG", "price": 3.00 },
+    { "id": 5, "title": "Head & Shoulders", "description": "Shampoo y acondicionador x 375ml", "image": "headshoulder.PNG", "price": 12.00 },
+    { "id": 6, "title": "Higienol", "description": "Papel higiénico higienol x 30mts", "image": "higienol.PNG", "price": 4.50 },
+    { "id": 7, "title": "Lavandina", "description": "Blanqueador y desinfectante lavandina x 4lt", "image": "lavandina.PNG", "price": 2.50 },
+    { "id": 8, "title": "Limpiador", "description": "Líquido limpiador para piso x 1.8lt", "image": "limpiador.PNG", "price": 6.00 },
+    { "id": 9, "title": "Limpiador Odex", "description": "Limpiador potente para desengrasar x 400gr", "image": "limpiadorodex.PNG", "price": 6.50 },
+    { "id": 10, "title": "Lustramuebles", "description": "Producto para lustrar muebles x 360cc", "image": "lustramuebles.PNG", "price": 8.00 },
+    { "id": 11, "title": "Magistral", "description": "Detergente para platos magistral x 750ml", "image": "magistral.PNG", "price": 9.00 },
+    { "id": 12, "title": "Rollo de Cocina", "description": "Papel absorbente para cocina x 200 paños", "image": "rollococina.PNG", "price": 1.50 },
+    { "id": 13, "title": "Skip", "description": "Jabón líquido para lavar ropa diluir x 500ml", "image": "skip.PNG", "price": 11.00 }
+]
