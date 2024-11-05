@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         getTotalPrice() {
             return this.items.reduce((total, item) => total + item.price * item.quantity, 0);
         }
-
         render() {
             const cartContainer = document.getElementById('cart');
             const totalPriceElement = document.getElementById('total-price').querySelector('h5');
