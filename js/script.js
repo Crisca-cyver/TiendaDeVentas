@@ -169,11 +169,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Mostrar alerta de éxito
                         Swal.fire('¡Éxito!', 'Producto añadido al carrito.', 'success');
                     } else {
-                        console.log('Cantidad no válida'); // Mensaje de error si la cantidad es 0 o negativa
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Cantidad no válida',
+                            text: 'Por favor, ingresa una cantidad mayor a 0.',
+                        });
                     }
                 });
             });
-
+            
             // Renderizar el carrito al cargar la página
             cart.render();
         })
