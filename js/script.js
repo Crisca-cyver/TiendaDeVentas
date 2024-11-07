@@ -177,11 +177,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             });
-            
+
             // Renderizar el carrito al cargar la página
             cart.render();
         })
-        .catch(error => console.error('Error al cargar los productos:', error));
+        .catch(error => {
+            // console.error('Error al cargar los productos:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error al cargar los productos',
+                text: 'Ocurrió un error al intentar cargar los productos. Por favor, inténtalo de nuevo.',
+            });
+        });
 
     // Vaciar carrito
     clearCartButton.addEventListener('click', () => {
